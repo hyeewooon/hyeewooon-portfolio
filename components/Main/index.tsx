@@ -1,11 +1,16 @@
 import React from 'react';
 
 import { Layout, Profile } from '@components';
+import * as SC from './Main.styles';
 
 const Main: React.FC = () => {
   return (
     <Layout>
-      <Profile />
+      <SC.MainContainer>
+        <SC.MainContent>
+          <Profile />
+        </SC.MainContent>
+      </SC.MainContainer>
     </Layout>
   );
 };

@@ -8,7 +8,9 @@ const mediaQuerySize: MediaQueryList = {
   mobile: '767px'
 };
 
-export const ThemeResource: DefaultTheme = {
+export const ThemeResource: {
+  mq: MediaQueryList;
+} = {
   mq: {
     tablet: `@media only screen and (max-width: ${mediaQuerySize.tablet})`,
     mobile: `@media only screen and (max-width: ${mediaQuerySize.mobile})`
