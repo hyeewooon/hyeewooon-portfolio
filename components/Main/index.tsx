@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, Profile } from '@components';
+import { Layout, Profile, About } from '@components';
 import * as SC from './Main.styles';
 
 const Main: React.FC = () => {
@@ -9,6 +9,7 @@ const Main: React.FC = () => {
       <SC.MainContainer>
         <SC.MainContent>
           <Profile />
+          <About />
         </SC.MainContent>
       </SC.MainContainer>
     </Layout>

@@ -14,7 +14,7 @@ const Profile: React.FC = () => {
           프론트엔드 개발자 <SC.ProfileStrongText>김혜원</SC.ProfileStrongText>입니다.
         </SC.ProfileText>
         <SC.ProfileText>
-          좋은 코드를 작성하는 것에 관심이 많고, 언제나 배우고 공유하기 위해 노력하고 있습니다.
+          좋은 코드를 작성하는 것에 관심이 많고, 새로운 것을 배우고 공유하기 위해 노력하고 있습니다.
         </SC.ProfileText>
       </SC.ProfileTextBox>
     </SC.ProfileContainer>

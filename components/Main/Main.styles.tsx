@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Theme } from '@base';
 
 export const MainContainer = styled.div`
-  height: calc(100% - 65px);
   margin-top: 70px;
   width: 100%;
   display: flex;

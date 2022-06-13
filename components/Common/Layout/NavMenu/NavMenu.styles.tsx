@@ -28,6 +28,9 @@ export const NavMenuContainer = styled.div<{ menuOpen: boolean }>`
 export const NavMenuFlexBox = styled.div`
   width: 80%;
   max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   ${Theme.ThemeResource.mq.mobile} {
     width: 90%;
@@ -61,7 +64,7 @@ export const NavMenuButton = styled(DefalutButton)`
 export const NavMenuList = styled.ul<{ menuOpen: boolean }>`
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 50px;
 
   ${Theme.ThemeResource.mq.mobile} {
     position: absolute;
@@ -101,5 +104,16 @@ export const NavMenuItem = styled.li`
     color: #bdc8de;
     cursor: pointer;
     transition-duration: 0.5s;
+  }
+`;
+
+export const IconLink = styled.a`
+  position: relative;
+  width: 35px;
+  height: 35px;
+
+  ${Theme.ThemeResource.mq.mobile} {
+    width: 30px;
+    height: 30px;
   }
 `;
