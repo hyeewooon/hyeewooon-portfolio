@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Theme } from '@base';
+
 export const BoxContainer = styled.div`
   background-color: #ffffff;
   display: flex;
@@ -44,8 +46,13 @@ export const Date = styled.p`
 `;
 export const TagList = styled.ul`
   display: flex;
-  gap: 10px;
   padding-top: 10px;
+  flex-flow: wrap;
+  gap: 10px;
+
+  ${Theme.ThemeResource.mq.mobile} {
+    gap: 5px;
+  }
 `;
 export const TagItem = styled.li`
   color: #404040;
@@ -53,4 +60,8 @@ export const TagItem = styled.li`
   padding: 3px;
   font-size: 13px;
   border-radius: 5px;
+
+  ${Theme.ThemeResource.mq.mobile} {
+    font-size: 10px;
+  }
 `;
