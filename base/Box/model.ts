@@ -1,6 +1,7 @@
 export type BoxProps = {
   title: string;
   subTitle?: string;
+  content?: string;
   date?: string;
   imageUrl?: string;
   tag?: {

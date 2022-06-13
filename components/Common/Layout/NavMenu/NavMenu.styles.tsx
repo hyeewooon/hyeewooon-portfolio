@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { Theme } from '@base';
 
 export const NavMenuContainer = styled.div<{ menuOpen: boolean }>`
-  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
