@@ -5,11 +5,17 @@ import { Theme } from '@base';
 export const AboutContainer = styled.div`
   margin-top: 100px;
   margin-bottom: 150px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
 
   ${Theme.ThemeResource.mq.mobile} {
     margin-top: 70px;
+    gap: 50px;
   }
 `;
+
+export const AboutContent = styled.div``;
 
 export const AboutTitle = styled.h1`
   font-size: 30px;

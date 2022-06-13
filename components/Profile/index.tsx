@@ -3,10 +3,11 @@ import React from 'react';
 import * as SC from './Profile.styles';
 
 const Profile: React.FC = () => {
+  const profileImage = '/images/profile.jpg';
   return (
     <SC.ProfileContainer>
       <SC.ProfileImageWrapper>
-        <SC.ProfileImage src="/images/profile.jpg" layout="fill" alt="Profile Image" />
+        {profileImage && <SC.ProfileImage src={profileImage} layout="fill" alt="Profile Image" />}
       </SC.ProfileImageWrapper>
       <SC.ProfileTextBox>
         <SC.ProfileTitle>안녕하세요 👋</SC.ProfileTitle>

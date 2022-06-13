@@ -10,9 +10,13 @@ export const BoxContainer = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  margin-left: 10px;
   width: 100%;
 `;
+
+export const ImageWrapper = styled.div`
+  margin-right: 20px;
+`;
+
 export const Head = styled.div`
   display: flex;
   justify-content: space-between;
@@ -26,11 +30,12 @@ export const BoxTitle = styled.h1`
 export const BoxSubTitle = styled.p`
   font-size: 16px;
   margin-bottom: 10px;
+  line-height: 1.2;
 `;
 
 export const BoxContent = styled.p`
   font-size: 14px;
-  margin-bottom: 10px;
+  line-height: 1.2;
 `;
 
 export const Date = styled.p`
@@ -40,6 +45,7 @@ export const Date = styled.p`
 export const TagList = styled.ul`
   display: flex;
   gap: 10px;
+  padding-top: 10px;
 `;
 export const TagItem = styled.li`
   color: #404040;
