@@ -24,6 +24,11 @@ export const Head = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+
+  ${Theme.ThemeResource.mq.mobile} {
+    font-size: 10px;
+    display: block;
+  }
 `;
 export const BoxTitle = styled.h1`
   font-size: 20px;
