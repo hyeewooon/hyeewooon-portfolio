@@ -18,13 +18,18 @@ const NavMenu: React.FC = () => {
   return (
     <SC.NavMenuContainer menuOpen={menuState.open}>
       <SC.NavMenuFlexBox>
-        <SC.NavMenuButton onClick={changeMenuState}>
-          <Image src="/images/icon-menu.svg" layout="fill" />
-        </SC.NavMenuButton>
-        <SC.NavMenuList menuOpen={menuState.open}>
-          <SC.NavMenuItem>About</SC.NavMenuItem>
-          <SC.NavMenuItem>Project</SC.NavMenuItem>
-        </SC.NavMenuList>
+        <div>
+          <SC.NavMenuButton onClick={changeMenuState}>
+            <Image src="/images/icon-menu.svg" layout="fill" />
+          </SC.NavMenuButton>
+          <SC.NavMenuList menuOpen={menuState.open}>
+            <SC.NavMenuItem>About</SC.NavMenuItem>
+            <SC.NavMenuItem>Projects</SC.NavMenuItem>
+          </SC.NavMenuList>
+        </div>
+        <SC.IconLink href="https://github.com/hyeewooon" target="_blank">
+          <Image src="/images/icon-github.svg" layout="fill" />
+        </SC.IconLink>
       </SC.NavMenuFlexBox>
     </SC.NavMenuContainer>
   );
