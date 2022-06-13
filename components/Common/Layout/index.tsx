@@ -8,6 +8,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     <SC.LayoutContainer>
       <NavMenu />
       <SC.ContentWrapper>{children}</SC.ContentWrapper>
+      <SC.footer>&copy; 2022 HYEWON PORTFOLIO</SC.footer>
     </SC.LayoutContainer>
   );
 };

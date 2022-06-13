@@ -5,7 +5,7 @@ import { BoxProps } from './model';
 import * as SC from './Box.styles';
 
 const Box: React.FC<BoxProps> = (props) => {
-  const { title = '', subTitle = '', imageUrl = '', tag = [], date = '' } = props;
+  const { title = '', subTitle = '', imageUrl = '', tag = [], date = '', content } = props;
   return (
     <SC.BoxContainer>
       {imageUrl && <Image src={imageUrl} alt="logo" width={80} height={80} />}
@@ -15,6 +15,7 @@ const Box: React.FC<BoxProps> = (props) => {
           {date && <SC.Date>{date}</SC.Date>}
         </SC.Head>
         {subTitle && <SC.BoxSubTitle>{subTitle}</SC.BoxSubTitle>}
+        {subTitle && <SC.BoxContent>{content}</SC.BoxContent>}
         <SC.TagList>
           {tag &&
             tag.map(({ name, color }) => {

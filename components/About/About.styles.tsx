@@ -4,6 +4,7 @@ import { Theme } from '@base';
 
 export const AboutContainer = styled.div`
   margin-top: 100px;
+  margin-bottom: 150px;
 
   ${Theme.ThemeResource.mq.mobile} {
     margin-top: 70px;

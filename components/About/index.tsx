@@ -16,6 +16,7 @@ const About: React.FC = () => {
           subTitle="Frontend Developer"
           imageUrl="/images/logo-company.jpg"
           date="2021.02 - 2022.05"
+          content="웹사이트, VOD 서비스 개발"
           tag={[
             { name: 'typescript', color: 'gray' },
             { name: 'javascript', color: 'gray' },

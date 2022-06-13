@@ -27,6 +27,12 @@ export const BoxSubTitle = styled.p`
   font-size: 16px;
   margin-bottom: 10px;
 `;
+
+export const BoxContent = styled.p`
+  font-size: 14px;
+  margin-bottom: 10px;
+`;
+
 export const Date = styled.p`
   font-size: 15px;
   color: #888888;
