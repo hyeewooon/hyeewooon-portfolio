@@ -19,7 +19,7 @@ export const AboutContent = styled.div``;
 
 export const AboutTitle = styled.h1`
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
   color: #2b323f;
   line-height: 1.5;
   position: relative;

@@ -32,7 +32,7 @@ export const Head = styled.div`
 `;
 export const BoxTitle = styled.h1`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 `;
 export const BoxSubTitle = styled.p`
   font-size: 16px;
