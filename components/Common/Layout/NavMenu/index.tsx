@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useRecoilState } from 'recoil';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import * as SC from './NavMenu.styles';
+import { navMenuStore } from '@components/Common/Layout/Layout.store';
+import { NavMenu } from '@components/Common/Layout/model';
+
+const menuInfo: { menuName: NavMenu; pageURL: string }[] = [
+  { menuName: 'About', pageURL: '/about' },
+  { menuName: 'Projects', pageURL: '/projects' }
+];
 
 const NavMenu: React.FC = () => {
   const [menuState, setMenuState] = useState({
     open: false
   });
+  const [navStatus, setNavStatus] = useRecoilState(navMenuStore);
+  const router = useRouter();
 
   const changeMenuState = () => {
     setMenuState({
@@ -14,6 +25,29 @@ const NavMenu: React.FC = () => {
       open: !menuState.open
     });
   };
+
+  const moveToPageURL = (menuName: NavMenu, pageURL: string) => {
+    setNavStatus({
+      ...navStatus,
+      currentMenu: menuName,
+      currentMenuPath: pageURL
+    });
+
+    router.push(pageURL);
+  };
+
+  const initActiveState = useCallback(() => {
+    const { pathname } = router;
+
+    setNavStatus((prevState) => ({
+      ...prevState,
+      currentMenuPath: pathname
+    }));
+  }, [router, setNavStatus]);
+
+  useEffect(() => {
+    initActiveState();
+  }, []);
 
   return (
     <SC.NavMenuContainer menuOpen={menuState.open}>
@@ -23,8 +57,17 @@ const NavMenu: React.FC = () => {
             <Image src="/images/icon-menu.svg" layout="fill" />
           </SC.NavMenuButton>
           <SC.NavMenuList menuOpen={menuState.open}>
-            <SC.NavMenuItem>About</SC.NavMenuItem>
-            <SC.NavMenuItem>Projects</SC.NavMenuItem>
+            {menuInfo.map(({ menuName, pageURL }) => {
+              return (
+                <SC.NavMenuItem
+                  active={navStatus.currentMenuPath === pageURL}
+                  key={menuName}
+                  onClick={() => moveToPageURL(menuName, pageURL)}
+                >
+                  {menuName}
+                </SC.NavMenuItem>
+              );
+            })}
           </SC.NavMenuList>
         </div>
         <SC.IconLink href="https://github.com/hyeewooon" target="_blank">
