@@ -59,9 +59,30 @@ export const TagList = styled.ul`
     gap: 5px;
   }
 `;
-export const TagItem = styled.li`
-  color: #404040;
-  background-color: #ecf1f5;
+export const TagItem = styled.li<{ tagColor: string }>`
+  ${({ tagColor }) => {
+    if (tagColor === 'red') {
+      return `
+        color: #df6d6d;
+        background-color: #fde9e9;
+      `;
+    } else if (tagColor === 'yellow') {
+      return `
+        color: #c2963e;
+        background-color: #fff8ce;
+      `;
+    } else if (tagColor === 'blue') {
+      return `
+        color: #5881bf;
+        background-color: #dbeef5;
+      `;
+    } else if (tagColor === 'gray') {
+      return `
+        color: #404040;
+        background-color: #ecf1f5;
+      `;
+    }
+  }}
   padding: 3px;
   font-size: 13px;
   border-radius: 5px;
