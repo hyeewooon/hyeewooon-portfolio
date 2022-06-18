@@ -41,5 +41,5 @@ export const ProfileText = styled.p`
 `;
 
 export const ProfileStrongText = styled.strong`
-  font-weight: 600;
+  font-weight: 500;
 `;
