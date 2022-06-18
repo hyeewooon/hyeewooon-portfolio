@@ -19,10 +19,10 @@ const About: React.FC = () => {
             date="2021.02 - 2022.05"
             content="웹사이트, VOD 서비스 개발"
             tag={[
-              { name: 'typescript', color: 'gray' },
-              { name: 'javascript', color: 'gray' },
-              { name: 'react', color: 'gray' },
-              { name: 'next.js', color: 'gray' }
+              { name: 'Typescript', color: 'gray' },
+              { name: 'Javascript', color: 'gray' },
+              { name: 'React', color: 'gray' },
+              { name: 'Next.js', color: 'gray' }
             ]}
           />
         </SC.BoxWrapper>
