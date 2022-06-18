@@ -90,10 +90,10 @@ export const NavMenuList = styled.ul<{ menuOpen: boolean }>`
   }
 `;
 
-export const NavMenuItem = styled.li`
+export const NavMenuItem = styled.li<{ active: boolean }>`
   position: relative;
   font-size: 20px;
-  color: #2b323f;
+  color: ${({ active }) => (active ? '#b3b3b3' : '#2b323f')};
 
   ${Theme.ThemeResource.mq.mobile} {
     width: 90%;
@@ -103,7 +103,7 @@ export const NavMenuItem = styled.li`
   }
 
   &:hover {
-    color: #bdc8de;
+    color: #b3b3b3;
     cursor: pointer;
     transition-duration: 0.5s;
   }

@@ -1,5 +1,6 @@
 export type NavStatus = {
-  open: boolean;
-  currentMenu: string;
-  currentMenuPath: string[];
+  currentMenu: NavMenu;
+  currentMenuPath: string;
 };
+
+export type NavMenu = 'About' | 'Projects';

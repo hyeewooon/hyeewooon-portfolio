@@ -18,9 +18,21 @@
     "paths": {
       "@base": ["./base"],
       "@components": ["./components"],
+      "@components/*": ["./components/*"],
       "@images": ["./images"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "*.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/**/*.ts",
+    "**/**/*.tsx",
+    "**/**/*.js",
+    "**/**/*.jsx"
+  ],
   "exclude": ["node_modules"]
 }

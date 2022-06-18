@@ -3,8 +3,8 @@ import { NextPage } from 'next';
 
 import { Main } from '@components';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return <Main />;
 };
 
-export default Home;
+export default About;
