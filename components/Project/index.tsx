@@ -17,10 +17,10 @@ const Project: React.FC = () => {
               <SC.BoxWrapper>
                 <Box
                   title="사내 관리 시스템"
-                  date="2021.03 - 2022.05"
+                  date="2022.03 - 2022.05"
                   tag={[
                     { name: 'Next.js', color: 'blue' },
-                    { name: 'TypeScript', color: 'blue' },
+                    { name: 'Typescript', color: 'blue' },
                     { name: 'React Query', color: 'yellow' },
                     { name: 'Recoil', color: 'yellow' },
                     { name: 'Styled Components', color: 'red' }
@@ -33,8 +33,8 @@ const Project: React.FC = () => {
                   date="2021.10 - 2022.02"
                   tag={[
                     { name: 'Next.js', color: 'blue' },
-                    { name: 'TypeScript', color: 'blue' },
-                    { name: 'Redux-Saga', color: 'yellow' },
+                    { name: 'Typescript', color: 'blue' },
+                    { name: 'Redux Saga', color: 'yellow' },
                     { name: 'Emotion', color: 'red' },
                     { name: 'I18n', color: 'yellow' }
                   ]}
@@ -46,7 +46,7 @@ const Project: React.FC = () => {
                   date="2021.10 - 2022.02"
                   tag={[
                     { name: 'React', color: 'blue' },
-                    { name: 'TypeScript', color: 'blue' },
+                    { name: 'Typescript', color: 'blue' },
                     { name: 'Recoil', color: 'yellow' },
                     { name: 'Styled Components', color: 'red' },
                     { name: 'I18n', color: 'yellow' }
@@ -78,7 +78,7 @@ const Project: React.FC = () => {
               <SC.BoxWrapper>
                 <Box
                   title="공식 웹사이트 리뉴얼 및 유지 보수"
-                  date="2021.05 - 2022.07"
+                  date="2021.05 - 2021.07"
                   tag={[
                     { name: 'React', color: 'blue' },
                     { name: 'Redux', color: 'yellow' },
@@ -88,7 +88,7 @@ const Project: React.FC = () => {
                 />
               </SC.BoxWrapper>
               <SC.BoxWrapper>
-                <Box title="채용 사이트 리뉴얼" date="2021.02 - 2022.04" tag={[{ name: 'React', color: 'blue' }]} />
+                <Box title="채용 사이트 리뉴얼" date="2021.02 - 2021.04" tag={[{ name: 'React', color: 'blue' }]} />
               </SC.BoxWrapper>
             </SC.ProjectWorkContent>
             <SC.ProjectWorkContent>
@@ -98,7 +98,7 @@ const Project: React.FC = () => {
               <SC.BoxWrapper>
                 <Box
                   title="개발 포트폴리오"
-                  date="2021.06"
+                  date="2022.06"
                   tag={[
                     { name: 'Next.js', color: 'blue' },
                     { name: 'Typescript', color: 'blue' },
