@@ -23,7 +23,11 @@ const Box: React.FC<BoxProps> = (props) => {
         {tag && (
           <SC.TagList>
             {tag.map(({ name, color }, index) => {
-              return <SC.TagItem key={`${name}_${index}`}>{name}</SC.TagItem>;
+              return (
+                <SC.TagItem tagColor={color} key={`${name}_${index}`}>
+                  {name}
+                </SC.TagItem>
+              );
             })}
           </SC.TagList>
         )}
