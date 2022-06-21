@@ -111,6 +111,7 @@ const Project: React.FC = () => {
                 { name: 'React', color: 'blue' },
                 { name: 'Redux', color: 'yellow' },
                 { name: 'Styled Components', color: 'red' },
+                { name: 'React Hook Form', color: 'yellow' },
                 { name: 'I18n', color: 'yellow' }
               ]}
             >
