@@ -34,24 +34,28 @@ export const BoxTitle = styled.h1`
   font-size: 20px;
   font-weight: 500;
 `;
+
+export const Date = styled.p`
+  font-size: 15px;
+  color: #888888;
+
+  ${Theme.ThemeResource.mq.mobile} {
+    margin-top: 10px;
+  }
+`;
+
 export const BoxSubTitle = styled.p`
   font-size: 16px;
-  margin-bottom: 10px;
-  line-height: 1.2;
 `;
 
 export const BoxContent = styled.p`
   font-size: 14px;
   line-height: 1.2;
-`;
-
-export const Date = styled.p`
-  font-size: 15px;
-  color: #888888;
+  margin-top: 10px;
 `;
 export const TagList = styled.ul`
   display: flex;
-  padding-top: 10px;
+  margin-top: 10px;
   flex-flow: wrap;
   gap: 10px;
 

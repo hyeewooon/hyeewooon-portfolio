@@ -8,4 +8,5 @@ export type BoxProps = {
     name: string;
     color: 'red' | 'yellow' | 'blue' | 'gray';
   }[];
+  children?: React.ReactNode;
 };

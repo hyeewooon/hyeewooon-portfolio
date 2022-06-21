@@ -3,34 +3,19 @@ import styled from 'styled-components';
 import { Theme } from '@base';
 
 export const ProjectContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-
-export const ProjectContent = styled.div`
-  width: 80%;
-  max-width: 900px;
-
-  ${Theme.ThemeResource.mq.mobile} {
-    width: 90%;
-  }
-`;
-
-export const ProjectWorkWrapper = styled.div`
-  margin-top: 70px;
+  margin-top: 50px;
   margin-bottom: 150px;
   gap: 70px;
   display: flex;
   flex-direction: column;
 
   ${Theme.ThemeResource.mq.mobile} {
-    margin-top: 50px;
+    margin-top: 30px;
     gap: 50px;
   }
 `;
 
-export const ProjectWorkContent = styled.div``;
+export const ProjectContent = styled.div``;
 
 export const ProjectTitle = styled.h1`
   font-size: 30px;
@@ -54,5 +39,19 @@ export const BoxWrapper = styled.div`
 
   ${Theme.ThemeResource.mq.mobile} {
     margin-top: 20px;
+  }
+`;
+
+export const ContentList = styled.ul`
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: initial;
+`;
+
+export const ContentItem = styled.li`
+  line-height: 1.5;
+
+  &::marker {
+    font-size: 14px;
   }
 `;

@@ -5,7 +5,7 @@ import { BoxProps } from './model';
 import * as SC from './Box.styles';
 
 const Box: React.FC<BoxProps> = (props) => {
-  const { title = '', subTitle = '', imageUrl = '', tag = null, date = '', content } = props;
+  const { title = '', subTitle = '', imageUrl = '', tag = null, date = '', content, children } = props;
   return (
     <SC.BoxContainer>
       {imageUrl && (
@@ -31,6 +31,7 @@ const Box: React.FC<BoxProps> = (props) => {
             })}
           </SC.TagList>
         )}
+        {children && <>{children}</>}
       </SC.ContentWrapper>
     </SC.BoxContainer>
   );
