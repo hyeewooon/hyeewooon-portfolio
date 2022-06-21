@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Theme } from '@base';
 
 export const ProfileContainer = styled.div`
+  margin-top: 70px;
   display: flex;
   align-items: center;
   gap: 40px;
