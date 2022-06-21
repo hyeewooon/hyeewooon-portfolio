@@ -54,7 +54,7 @@ const NavMenu: React.FC = () => {
       <SC.NavMenuFlexBox>
         <div>
           <SC.NavMenuButton onClick={changeMenuState}>
-            <Image src="/images/icon-menu.svg" layout="fill" />
+            <Image src="/images/icon-menu.svg" layout="fill" alt="menu" />
           </SC.NavMenuButton>
           <SC.NavMenuList menuOpen={menuState.open}>
             {menuInfo.map(({ menuName, pageURL }) => {
@@ -71,7 +71,7 @@ const NavMenu: React.FC = () => {
           </SC.NavMenuList>
         </div>
         <SC.IconLink href="https://github.com/hyeewooon" target="_blank">
-          <Image src="/images/icon-github.svg" layout="fill" />
+          <Image src="/images/icon-github.svg" layout="fill" alt="github" />
         </SC.IconLink>
       </SC.NavMenuFlexBox>
     </SC.NavMenuContainer>
