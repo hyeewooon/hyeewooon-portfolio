@@ -7,11 +7,20 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/_next/image(.*)',
+        source: '/image/:image*',
         headers: [
           {
             key: 'Cache-Control',
             value: 'no-cache, no-store, max-age=0, must-revalidate'
+          }
+        ]
+      },
+      {
+        source: '/fonts/:font*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000'
           }
         ]
       }
