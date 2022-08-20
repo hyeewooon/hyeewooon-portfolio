@@ -6,14 +6,15 @@ import { MetaData } from './model';
 const siteTitle = 'KIM HYE WON PORTFOLIO';
 
 const Head: React.FC<MetaData> = (props) => {
-  const { title = '', description = '', url = process.env.HOSTNAME ?? '' } = props;
+  const { title = '', description = '개발 포트폴리오', url = process.env.HOSTNAME ?? '' } = props;
   const headTitle = `${siteTitle} ${title}`;
 
   return (
     <NextHead>
       <title>{headTitle}</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="robots" content="index, nofollow" />
-      <meta name="apple-mobile-web-app-title" content="KIM HYE WON PORTFOLIO" />
+      <meta name="apple-mobile-web-app-title" content={siteTitle} />
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={headTitle} />
