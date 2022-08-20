@@ -84,9 +84,6 @@ const Project: React.FC = () => {
               ]}
             >
               <SC.ContentList>
-                <SC.ContentItem>신규 개설된 클래스의 스케줄 확인 및 예약 기능 개발</SC.ContentItem>
-                <SC.ContentItem>Kakao JS SDK를 사용하여 SNS 링크 공유 기능 개발</SC.ContentItem>
-                <SC.ContentItem>여러 국가에 대한 홍보 효과를 위해 i18n을 이용하여 다국어 적용</SC.ContentItem>
                 <SC.ContentItem>Intersection Observer API를 도입하여 이벤트 호출 주기 개선 및 성능 향상</SC.ContentItem>
                 <SC.ContentItem>react-helmet를 이용하여 메타데이터 수정 및 SEO 개선</SC.ContentItem>
                 <SC.ContentItem>
