@@ -36,19 +36,6 @@ const NavMenu: React.FC = () => {
     router.push(pageURL);
   };
 
-  const initActiveState = useCallback(() => {
-    const { pathname } = router;
-
-    setNavStatus((prevState) => ({
-      ...prevState,
-      currentMenuPath: pathname
-    }));
-  }, [router, setNavStatus]);
-
-  useEffect(() => {
-    initActiveState();
-  }, []);
-
   return (
     <SC.NavMenuContainer menuOpen={menuState.open}>
       <SC.NavMenuFlexBox>
@@ -60,7 +47,7 @@ const NavMenu: React.FC = () => {
             {menuInfo.map(({ menuName, pageURL }) => {
               return (
                 <SC.NavMenuItem
-                  active={navStatus.currentMenuPath === pageURL}
+                  active={router.pathname === pageURL}
                   key={menuName}
                   onClick={() => moveToPageURL(menuName, pageURL)}
                 >

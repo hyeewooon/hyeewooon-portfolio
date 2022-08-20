@@ -7,7 +7,7 @@ const Profile: React.FC = () => {
   return (
     <SC.ProfileContainer>
       <SC.ProfileImageWrapper>
-        {profileImage && <SC.ProfileImage src={profileImage} layout="fill" alt="Profile Image" />}
+        {profileImage && <SC.ProfileImage src={profileImage} width={150} height={150} alt="Profile Image" priority />}
       </SC.ProfileImageWrapper>
       <SC.ProfileTextBox>
         <SC.ProfileTitle>안녕하세요 👋</SC.ProfileTitle>
