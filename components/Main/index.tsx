@@ -5,7 +5,7 @@ import { Layout, Profile, About, Head } from '@components';
 const Main: React.FC = () => {
   return (
     <Layout>
-      <Head title="About" />
+      <Head title="ABOUT" />
       <Profile />
       <About />
     </Layout>
