@@ -1,6 +1,4 @@
 export type NavStatus = {
-  currentMenu: NavMenu;
+  currentMenu: string;
   currentMenuPath: string;
 };
-
-export type NavMenu = 'About' | 'Projects';

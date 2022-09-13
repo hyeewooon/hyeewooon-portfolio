@@ -1,22 +1,20 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import * as SC from './NavMenu.styles';
-import { navMenuStore } from '@components/Common/Layout/Layout.store';
-import { NavMenu } from '@components/Common/Layout/model';
 
-const menuInfo: { menuName: NavMenu; pageURL: string }[] = [
+const menuInfo: { menuName: string; pageURL: string; target?: '_blank' }[] = [
   { menuName: 'About', pageURL: '/about' },
-  { menuName: 'Projects', pageURL: '/projects' }
+  { menuName: 'Projects', pageURL: '/projects' },
+  { menuName: 'Blog', pageURL: 'https://velog.io/@hyeewooon', target: '_blank' }
 ];
 
 const NavMenu: React.FC = () => {
   const [menuState, setMenuState] = useState({
     open: false
   });
-  const [navStatus, setNavStatus] = useRecoilState(navMenuStore);
   const router = useRouter();
 
   const changeMenuState = () => {
@@ -26,12 +24,11 @@ const NavMenu: React.FC = () => {
     });
   };
 
-  const moveToPageURL = (menuName: NavMenu, pageURL: string) => {
-    setNavStatus({
-      ...navStatus,
-      currentMenu: menuName,
-      currentMenuPath: pageURL
-    });
+  const moveToPageURL = (menuName: string, pageURL: string, target?: '_blank') => {
+    if (target) {
+      window.open(pageURL, '_blank');
+      return;
+    }
 
     router.push(pageURL);
   };
@@ -44,12 +41,12 @@ const NavMenu: React.FC = () => {
             <Image src="/images/icon-menu.svg" layout="fill" alt="menu" />
           </SC.NavMenuButton>
           <SC.NavMenuList menuOpen={menuState.open}>
-            {menuInfo.map(({ menuName, pageURL }) => {
+            {menuInfo.map(({ menuName, pageURL, target }) => {
               return (
                 <SC.NavMenuItem
                   active={router.pathname === pageURL}
                   key={menuName}
-                  onClick={() => moveToPageURL(menuName, pageURL)}
+                  onClick={() => moveToPageURL(menuName, pageURL, target)}
                 >
                   {menuName}
                 </SC.NavMenuItem>

@@ -93,7 +93,7 @@ export const NavMenuList = styled.ul<{ menuOpen: boolean }>`
 export const NavMenuItem = styled.li<{ active: boolean }>`
   position: relative;
   font-size: 20px;
-  color: ${({ active }) => (active ? '#b3b3b3' : '#2b323f')};
+  color: ${({ active }) => (active ? '#2b323f' : '#b3b3b3')};
 
   ${Theme.ThemeResource.mq.mobile} {
     width: 90%;
@@ -103,7 +103,7 @@ export const NavMenuItem = styled.li<{ active: boolean }>`
   }
 
   &:hover {
-    color: #b3b3b3;
+    color: #2b323f;
     cursor: pointer;
     transition-duration: 0.5s;
   }
