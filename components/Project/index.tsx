@@ -7,7 +7,7 @@ import * as SC from './Main.styles';
 const Project: React.FC = () => {
   return (
     <Layout>
-      <Head title="Projects" />
+      <Head title="PROJECTS" />
       <SC.ProjectContainer>
         <SC.ProjectContent>
           <SC.ProjectTitle>

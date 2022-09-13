@@ -7,7 +7,7 @@ const siteTitle = 'KIM HYE WON PORTFOLIO';
 
 const Head: React.FC<MetaData> = (props) => {
   const { title = '', description = '개발 포트폴리오', url = process.env.HOSTNAME ?? '' } = props;
-  const headTitle = `${siteTitle} ${title}`;
+  const headTitle = `${title} : ${siteTitle}`;
 
   return (
     <NextHead>
