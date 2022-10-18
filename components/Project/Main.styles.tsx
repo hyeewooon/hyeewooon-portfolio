@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import { Theme } from '@base';
 
@@ -54,4 +55,9 @@ export const ContentItem = styled.li`
   &::marker {
     font-size: 14px;
   }
+`;
+
+export const ContentLink = styled.a`
+  color: #b2b2b2;
+  text-decoration: none;
 `;

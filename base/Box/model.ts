@@ -1,7 +1,7 @@
 export type BoxProps = {
   title: string;
   subTitle?: string;
-  content?: string;
+  content?: string | React.ReactNode;
   date?: string;
   imageUrl?: string;
   tag?: {
