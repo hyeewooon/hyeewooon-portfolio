@@ -57,7 +57,7 @@ export const ContentItem = styled.li`
   }
 `;
 
-export const ContentLink = styled.a`
+export const ContentLink = styled(Link)`
   color: #b2b2b2;
   text-decoration: none;
 `;

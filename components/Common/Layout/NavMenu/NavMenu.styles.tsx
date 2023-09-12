@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Theme } from '@base';
 
-export const NavMenuContainer = styled.div<{ menuOpen: boolean }>`
+export const NavMenuContainer = styled.nav<{ menuOpen: boolean }>`
   position: fixed;
   top: 0px;
   left: 0px;
@@ -63,7 +64,7 @@ export const NavMenuButton = styled(DefalutButton)`
   }
 `;
 
-export const NavMenuList = styled.ul<{ menuOpen: boolean }>`
+export const NavMenuList = styled.div<{ menuOpen: boolean }>`
   position: relative;
   display: flex;
   gap: 50px;
@@ -90,10 +91,11 @@ export const NavMenuList = styled.ul<{ menuOpen: boolean }>`
   }
 `;
 
-export const NavMenuItem = styled.li<{ active: boolean }>`
+export const NavMenuItem = styled(Link)<{ active: string }>`
   position: relative;
   font-size: 20px;
-  color: ${({ active }) => (active ? '#2b323f' : '#b3b3b3')};
+  text-decoration: none;
+  color: ${({ active }) => (active === 'true' ? '#2b323f' : '#b3b3b3')};
 
   ${Theme.ThemeResource.mq.mobile} {
     width: 90%;
@@ -109,7 +111,7 @@ export const NavMenuItem = styled.li<{ active: boolean }>`
   }
 `;
 
-export const IconLink = styled.a`
+export const IconLink = styled(Link)`
   position: relative;
   width: 35px;
   height: 35px;
