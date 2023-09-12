@@ -2,12 +2,13 @@ import React from 'react';
 
 import * as SC from './Profile.styles';
 
+import profileImage from '@images/profile.jpg';
+
 const Profile: React.FC = () => {
-  const profileImage = '/images/profile.jpg';
   return (
     <SC.ProfileContainer>
       <SC.ProfileImageWrapper>
-        {profileImage && <SC.ProfileImage src={profileImage} width={150} height={150} alt="Profile Image" priority />}
+        <SC.ProfileImage src={profileImage} width={150} height={150} alt="Profile Image" placeholder="blur" />
       </SC.ProfileImageWrapper>
       <SC.ProfileTextBox>
         <SC.ProfileTitle>안녕하세요 👋</SC.ProfileTitle>

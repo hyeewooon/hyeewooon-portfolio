@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { Box } from '@base';
 import { Layout, Head } from '@components';
@@ -16,37 +15,11 @@ const Project: React.FC = () => {
           </SC.ProjectTitle>
           <SC.BoxWrapper>
             <Box
-              title="NFT 관리 웹 서비스"
-              date="2022.09"
-              content={
-                <Link href="https://wavespace.vercel.app" passHref>
-                  <SC.ContentLink target="_blank">https://wavespace.vercel.app</SC.ContentLink>
-                </Link>
-              }
-              tag={[
-                { name: 'Next.js', color: 'blue' },
-                { name: 'Typescript', color: 'blue' },
-                { name: 'Recoil', color: 'yellow' },
-                { name: 'Styled Components', color: 'red' }
-              ]}
-            >
-              <SC.ContentList>
-                <SC.ContentItem>지갑 연동 및 서명을 통한 트랜잭션 제출 기능 개발</SC.ContentItem>
-                <SC.ContentItem>토큰 생성 및 다른 지갑으로 NFT 전송 기능 개발</SC.ContentItem>
-                <SC.ContentItem>기존 SDK에 정의된 any 타입을 명확한 타입으로 확장하여 타입 안정성 개선</SC.ContentItem>
-                <SC.ContentItem>
-                  지갑 연결 및 블록체인과 상호작용하는 로직을 커스텀 훅으로 개발하여 재사용성 향상
-                </SC.ContentItem>
-              </SC.ContentList>
-            </Box>
-          </SC.BoxWrapper>
-          <SC.BoxWrapper>
-            <Box
               title="개발 포트폴리오"
               content={
-                <Link href="https://hyeewooon-portfolio.vercel.app" passHref>
-                  <SC.ContentLink target="_blank">https://hyeewooon-portfolio.vercel.app</SC.ContentLink>
-                </Link>
+                <SC.ContentLink href="https://hyeewooon-portfolio.vercel.app" passHref target="_blank">
+                  https://hyeewooon-portfolio.vercel.app
+                </SC.ContentLink>
               }
               date="2022.06"
               tag={[

@@ -4,6 +4,9 @@ import { Box } from '@base';
 
 import * as SC from './About.styles';
 
+import companyImage from '@images/logo-company.webp';
+import univImage from '@images/logo-univ.png';
+
 const About: React.FC = () => {
   return (
     <SC.AboutContainer>
@@ -15,9 +18,9 @@ const About: React.FC = () => {
           <Box
             title="1MILLION"
             subTitle="Frontend Developer"
-            imageUrl="/images/logo-company.jpg"
+            imageUrl={companyImage}
             date="2021.02 - 2022.05"
-            content="웹사이트, VOD 서비스 개발"
+            content="홈페이지, VOD 서비스 개발"
             tag={[
               { name: 'Typescript', color: 'gray' },
               { name: 'Javascript', color: 'gray' },
@@ -35,7 +38,8 @@ const About: React.FC = () => {
           <Box
             title="아주대학교"
             subTitle="디지털미디어전공"
-            imageUrl="/images/logo-ajou.png"
+            imageUrl={univImage}
+            alt="education"
             date="2017.02 - 2021.02"
             tag={[
               { name: 'Programming', color: 'gray' },

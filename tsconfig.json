@@ -16,10 +16,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "@base": ["./base"],
       "@components": ["./components"],
       "@components/*": ["./components/*"],
-      "@images": ["./images"]
+      "@images/*": ["./public/images/*"]
     }
   },
   "include": [
