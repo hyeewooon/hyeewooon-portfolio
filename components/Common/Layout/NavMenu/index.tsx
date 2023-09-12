@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 import * as SC from './NavMenu.styles';
 
@@ -24,29 +23,21 @@ const NavMenu: React.FC = () => {
     });
   };
 
-  const moveToPageURL = (menuName: string, pageURL: string, target?: '_blank') => {
-    if (target) {
-      window.open(pageURL, '_blank');
-      return;
-    }
-
-    router.push(pageURL);
-  };
-
   return (
     <SC.NavMenuContainer menuOpen={menuState.open}>
       <SC.NavMenuFlexBox>
         <div>
           <SC.NavMenuButton onClick={changeMenuState}>
-            <Image src="/images/icon-menu.svg" layout="fill" alt="menu" />
+            <Image src="/images/icon-menu.svg" fill alt="menu" />
           </SC.NavMenuButton>
           <SC.NavMenuList menuOpen={menuState.open}>
             {menuInfo.map(({ menuName, pageURL, target }) => {
               return (
                 <SC.NavMenuItem
-                  active={router.pathname === pageURL}
                   key={menuName}
-                  onClick={() => moveToPageURL(menuName, pageURL, target)}
+                  href={pageURL}
+                  target={target ?? '_self'}
+                  active={router.pathname === pageURL ? 'true' : 'false'}
                 >
                   {menuName}
                 </SC.NavMenuItem>
@@ -55,7 +46,7 @@ const NavMenu: React.FC = () => {
           </SC.NavMenuList>
         </div>
         <SC.IconLink href="https://github.com/hyeewooon" target="_blank">
-          <Image src="/images/icon-github.svg" layout="fill" alt="github" />
+          <Image src="/images/icon-github.svg" fill alt="github" />
         </SC.IconLink>
       </SC.NavMenuFlexBox>
     </SC.NavMenuContainer>
