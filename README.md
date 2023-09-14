@@ -6,24 +6,23 @@
 - TypeScript
 - Next.js
 - Styled Components
-- Recoil
 
 ## Start Development
 
 ### Install Dependancy Library
 
 ```
-npm install
+yarn install
 ```
 
 ### Start Development Server
 
 ```
-npm run dev
+yarn dev
 ```
 
 ### Start Build
 
 ```
-npm run build
+yarn build
 ```
