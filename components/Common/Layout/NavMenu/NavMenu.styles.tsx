@@ -91,7 +91,7 @@ export const NavMenuList = styled.div<{ menuOpen: boolean }>`
   }
 `;
 
-export const NavMenuItem = styled(Link)<{ active: string }>`
+export const NavMenuLink = styled(Link)<{ active: string }>`
   position: relative;
   font-size: 20px;
   text-decoration: none;

@@ -7,7 +7,7 @@ import * as SC from './NavMenu.styles';
 const menuInfo: { menuName: string; pageURL: string; target?: '_blank' }[] = [
   { menuName: 'About', pageURL: '/about' },
   { menuName: 'Projects', pageURL: '/projects' },
-  { menuName: 'Blog', pageURL: 'https://velog.io/@hyeewooon', target: '_blank' }
+  { menuName: 'Blog', pageURL: 'https://hyeewooon.tistory.com', target: '_blank' }
 ];
 
 const NavMenu: React.FC = () => {
@@ -33,14 +33,15 @@ const NavMenu: React.FC = () => {
           <SC.NavMenuList menuOpen={menuState.open}>
             {menuInfo.map(({ menuName, pageURL, target }) => {
               return (
-                <SC.NavMenuItem
+                <SC.NavMenuLink
                   key={menuName}
                   href={pageURL}
                   target={target ?? '_self'}
                   active={router.pathname === pageURL ? 'true' : 'false'}
+                  replace
                 >
                   {menuName}
-                </SC.NavMenuItem>
+                </SC.NavMenuLink>
               );
             })}
           </SC.NavMenuList>
